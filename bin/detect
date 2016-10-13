@@ -1,8 +1,9 @@
 #!/bin/sh
 
-if [ npm run -l | grep "^  build$" ]; then
+if [ $(npm run -l | grep "^  build$") ]; then
     echo "-----> Will run `npm run build`..."
     exit 0
 else
+    echo "-----> ! There is no `build` script"
     exit 1
 fi
