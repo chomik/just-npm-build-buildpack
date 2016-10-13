@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-echo "Will run `npm run build`"
+echo "Just runs npm run build"
 exit 0

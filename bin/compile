@@ -2,10 +2,7 @@
 
 BUILD_DIR=$1
 
-indent() {
-  sed -u 's/^/       /'
-}
-
 cd $BUILD_DIR
+
 echo "-----> Running 'npm run build'"
-npm run build 2>&1 | indent
+npm run build
