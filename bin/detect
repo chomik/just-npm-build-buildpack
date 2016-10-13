@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-echo "-----> Will run `npm run build`..."
+if [ $(pushd $1 && npm run -l | grep "^  build$") ]; then
+    echo "-----> Will run `npm run build`..."
+    exit 0
+else
+    echo "-----> ! There is no `build` script"
+    exit 1
+fi
