@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ npm run -l | grep "^  build$" ]; then
+    echo "-----> Will run `npm run build`..."
+    exit 0
+else
+    exit 1
+fi
