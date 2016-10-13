@@ -1,0 +1,8 @@
+#!/bin/sh
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+echo "-----> Running 'npm run build'"
+npm run build 2>&1 | indent
